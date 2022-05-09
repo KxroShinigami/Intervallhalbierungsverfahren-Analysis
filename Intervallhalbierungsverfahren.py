@@ -89,10 +89,14 @@ def Intervallhalbierungsverfahren():
 
         zwischenergebnis = Funktion(m_neu)
         
-        if(zwischenergebnis >= 0): m_pos = m_neu
+        if(zwischenergebnis == 0):
+                print("m", i, " ist: ", m_neu, " und genau dem Nullpunkt.")
+                break
+        elif(zwischenergebnis > 0): m_pos = m_neu
         else: m_neg = m_neu
 
-        print("\nDas Ergebnis für f(m", i, ") ist: ", zwischenergebnis)
+        print("\nm", i, "ist: ", m_neu)
+        print("Das Ergebnis für f(m", i, ") ist: ", zwischenergebnis)
         print("Neues m_neg: ", m_neg)
         print("Neues m_pos: ", m_pos)
 
